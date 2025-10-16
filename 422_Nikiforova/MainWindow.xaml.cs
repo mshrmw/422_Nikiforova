@@ -25,6 +25,7 @@ namespace _422_Nikiforova
         {
             InitializeComponent();
             ApplyTheme("Dictionary.xaml");
+            MainFrame.Navigate(new Pages.AuthPage());
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {

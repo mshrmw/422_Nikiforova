@@ -17,6 +17,7 @@
             <RowDefinition Height="233*" />
         </Grid.RowDefinitions>
         <Label Content="Пароль" x:Name="labelPass" Margin="173,188,0,232" HorizontalAlignment="Left" Width="80" Grid.RowSpan="2" />
+        <Label Content="Логин" x:Name="labelLogin" Margin="173,10,0,232" HorizontalAlignment="Left" Width="80" Grid.RowSpan="2" />
         <TextBox x:Name="TextBoxLogin" Background="Transparent" Margin="60,0,0,75" TextWrapping="Wrap" ToolTip="Введите логин или почту" TextChanged="TextBoxLogin_TextChanged" Height="34" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="140" Grid.Column="1" />
         <PasswordBox x:Name="PasswordBox" Background="Transparent" ToolTip="Введите пароль" Margin="0,0,333,0" HorizontalAlignment="Right" Width="140" Height="32" VerticalAlignment="Bottom" Grid.Column="1" />
         <Button x:Name="ButtonEnter" Margin="60,20,0,0" Height="34" Content="Вход" ToolTip="Кнопка входа" Grid.Row="1" HorizontalAlignment="Left" Width="140" VerticalAlignment="Top" Grid.Column="1" Click="ButtonEnter_OnClick" />
