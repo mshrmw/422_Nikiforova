@@ -15,8 +15,8 @@
         </Grid.RowDefinitions>
         <Frame x:Name="MainFrame" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" NavigationUIVisibility="Hidden"/>
         <TextBlock x:Name="DateTimeNow" HorizontalAlignment="Left" Margin="522,0,0,0" Grid.Row="2" VerticalAlignment="Center" Grid.Column="1"/>
-        <Button Content="Назад" x:Name="Window_Back" HorizontalAlignment="Left"/>
-
+        <Button Content="Назад" x:Name="Window_Back" HorizontalAlignment="Left" Grid.Row="0"/>
+        <Button x:Name="ChangeThemeButton" Content="Темная тема" Click="ChangeThemeButton_Click" HorizontalAlignment="Right" Grid.Row="0"/>
 
 
 

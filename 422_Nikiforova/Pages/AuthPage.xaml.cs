@@ -26,5 +26,30 @@ namespace _422_Nikiforova.Pages
         {
             InitializeComponent();
         }
+
+        private void ButtonChangePassword_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonEnter_OnClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonReg_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TextBoxLogin_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void PasswordBox_PasswordChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

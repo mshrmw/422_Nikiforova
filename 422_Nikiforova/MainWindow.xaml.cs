@@ -20,9 +20,11 @@ namespace _422_Nikiforova
     /// </summary>
     public partial class MainWindow : Window
     {
+        private bool IsTheme2 = false;
         public MainWindow()
         {
             InitializeComponent();
+            ApplyTheme("Dictionary.xaml");
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
@@ -44,6 +46,38 @@ namespace _422_Nikiforova
             else e.Cancel = false;
         }
 
-      
+        private void ChangeThemeButton_Click(object sender, RoutedEventArgs e)
+        {
+            {
+                if (IsTheme2)
+                {
+                    ApplyTheme("Dictionary.xaml");
+                    this.Background = Brushes.Pink;
+                    ChangeThemeButton.Content = "Темная тема";
+                }
+                else
+                {
+                    ApplyTheme("Dictionary2.xaml");
+                    this.Background = Brushes.Green;
+                    ChangeThemeButton.Content = "Светлая тема";
+                }
+
+                IsTheme2 = !IsTheme2;
+            }
+        }
+        private void ApplyTheme(string themeFileName)
+        {
+            try
+            {
+                var uri = new Uri(themeFileName, UriKind.Relative);
+                ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
+                Application.Current.Resources.Clear();
+                Application.Current.Resources.MergedDictionaries.Add(resourceDict);
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show($"Ошибка загрузки темы: {ex.Message}");
+            }
+        }
     }
 }
