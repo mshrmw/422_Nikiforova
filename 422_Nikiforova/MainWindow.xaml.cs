@@ -80,5 +80,10 @@ namespace _422_Nikiforova
                 MessageBox.Show($"Ошибка загрузки темы: {ex.Message}");
             }
         }
+
+        private void Window_Back_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

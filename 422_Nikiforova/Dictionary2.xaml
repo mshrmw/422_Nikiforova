@@ -5,7 +5,7 @@
         <Setter Property="Height" Value="35"/>
         <Setter Property="Width" Value="130"/>
         <Setter Property="Margin" Value="12, 5"/>
-        <Setter Property="FontSize" Value="8pt"/>
+        <Setter Property="FontSize" Value="5pt"/>
         <Setter Property="Background" Value="Blue"/>
         <Setter Property="Foreground" Value="Black"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
@@ -21,19 +21,19 @@
 
     <Style TargetType="Label">
         <Setter Property="Foreground" Value="White"/>
-        <Setter Property="FontSize" Value="15pt"/>
+        <Setter Property="FontSize" Value="11pt"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
     </Style>
 
     <Style TargetType="TextBlock">
         <Setter Property="Foreground" Value="White"/>
-        <Setter Property="FontSize" Value="15pt"/>
+        <Setter Property="FontSize" Value="11pt"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
     </Style>
 
     <Style TargetType="TextBox">
         <Setter Property="Foreground" Value="White"/>
-        <Setter Property="FontSize" Value="15pt"/>
+        <Setter Property="FontSize" Value="11pt"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
     </Style>
 
