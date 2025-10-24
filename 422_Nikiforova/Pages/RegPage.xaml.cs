@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Security.Cryptography;
 
 namespace _422_Nikiforova.Pages
 {
@@ -111,7 +112,7 @@ namespace _422_Nikiforova.Pages
                     else if (!((passBxFrst.Password[i] >= 'A' && passBxFrst.Password[i] <= 'Z') || (passBxFrst.Password[i] >= 'a' && passBxFrst.Password[i] <= 'z'))) en = false;
                 }
                 if (!en) MessageBox.Show("Используйте только английскую расскладку!");
-                else if (!number) MessageBox.Show("Добавьте хотябы одну цифру!");
+                else if (!number) MessageBox.Show("Добавьте хотя бы одну цифру!");
                 if (en && number)
                 {
                     if (passBxFrst.Password != passBxScnd.Password)
