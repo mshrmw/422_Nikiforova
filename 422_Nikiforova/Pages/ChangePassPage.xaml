@@ -6,9 +6,30 @@
       xmlns:local="clr-namespace:_422_Nikiforova.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Замена пароля">
+      Title="Смена пароля">
 
-    <Grid>
-        
+    <Grid HorizontalAlignment="Center" Width="800" Height="360" VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="271*" />
+            <ColumnDefinition Width="529*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Label Content="Старый пароль" x:Name="labelOldPass" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0" FontSize="20" />
+        <Label Content="Логин" x:Name="labelLogin"  HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" FontSize="20"/>
+        <Label Content="Новый пароль" x:Name="labelNewPass" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" FontSize="20"/>
+        <Label Content="Подтверждение нового пароля" x:Name="labelNewTooPass" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="0" FontSize="20"/>
+
+        <TextBox x:Name="TextBoxLogin" Background="Transparent" TextWrapping="Wrap" ToolTip="Введите логин или почту" Height="34" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140" Grid.Column="1" Grid.Row="0"/>
+        <PasswordBox x:Name="PBOldPass" Background="Transparent" ToolTip="Введите старый пароль" Height="34" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140" Grid.Column="1" Grid.Row="1"/>
+        <PasswordBox x:Name="PBNewPass" Background="Transparent" ToolTip="Введите новый пароль" Height="34" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140" Grid.Column="1" Grid.Row="2"/>
+        <PasswordBox x:Name="PBNewTwoPass" Background="Transparent" ToolTip="Введите новый пароль ещё раз" Height="34" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140" Grid.Column="1" Grid.Row="3"/>
+
+        <Button x:Name="ButtonSaveChangePassword" Content="Сохранить" ToolTip="Кнопка сохранения смены пароля" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2" Click="ButtonSaveChangePassword_Click" />
     </Grid>
 </Page>

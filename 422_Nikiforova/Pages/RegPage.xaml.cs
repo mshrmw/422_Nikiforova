@@ -140,9 +140,9 @@ namespace _422_Nikiforova.Pages
                         return;
                     }
                 }
-
-            else MessageBox.Show("Пароль слишком короткий, должно быть минимум 6 символов!");
             }
+            else MessageBox.Show("Пароль слишком короткий, должно быть минимум 6 символов!");
+            
         }
     }
 }
