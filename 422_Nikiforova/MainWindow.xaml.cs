@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _422_Nikiforova.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -83,7 +84,15 @@ namespace _422_Nikiforova
 
         private void Window_Back_Click(object sender, RoutedEventArgs e)
         {
-
+            if (MainFrame.CanGoBack)
+            {
+                MainFrame.GoBack();
+            }
+            else
+            {
+                MessageBox.Show("Нельзя вернуться назад!");
+                MainFrame.Navigate(new AuthPage());
+            }
         }
     }
 }
