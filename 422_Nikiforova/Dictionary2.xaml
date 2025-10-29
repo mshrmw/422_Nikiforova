@@ -32,7 +32,7 @@
     </Style>
 
     <Style TargetType="TextBox">
-        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Foreground" Value="Black"/>
         <Setter Property="FontSize" Value="9pt"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
     </Style>
@@ -40,7 +40,7 @@
     <Style TargetType="DataGrid">
         <Setter Property="Margin" Value="8"/>
         <Setter Property="FontSize" Value="12"/>
-        <Setter Property="Background" Value="Black"/>
+        <Setter Property="Background" Value="Green"/>
         <Setter Property="Foreground" Value="White"/>
         <Setter Property="RowBackground" Value="#FF565656"/>
         <Setter Property="AlternatingRowBackground" Value="#FFA9F6E8"/>
@@ -50,7 +50,7 @@
 
     <Style TargetType="DataGridColumnHeader">
         <Setter Property="Background" Value="#FF2CEDD8"/>
-        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Foreground" Value="#FF565656"/>
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="Height" Value="32"/>
     </Style>

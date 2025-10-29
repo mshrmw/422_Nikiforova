@@ -23,6 +23,43 @@ namespace _422_Nikiforova.Pages
         public PaymentTabPage()
         {
             InitializeComponent();
+            DataGridPayment.ItemsSource = DB_PaymentEntities.GetContext().Payment.ToList();
+            this.IsVisibleChanged += Page_IsVisibleChanged;
+        }
+
+        private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            if (Visibility == Visibility.Visible)
+            {
+                DB_PaymentEntities.GetContext().ChangeTracker.Entries().ToList().ForEach(x => x.Reload());
+                DataGridPayment.ItemsSource = DB_PaymentEntities.GetContext().Payment.ToList();
+            }
+        }
+        private void ButtonAdd_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new AddPaymentPage(null));
+        }
+        private void ButtonDel_Click(object sender, RoutedEventArgs e)
+        {
+            var paymentForRemoving = DataGridPayment.SelectedItems.Cast<Payment>().ToList();
+            if (MessageBox.Show($"Вы точно хотите удалить записи в количестве { paymentForRemoving.Count()} элементов ? ", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes) {
+                try
+                {
+                    DB_PaymentEntities.GetContext().Payment.RemoveRange(paymentForRemoving);
+                    DB_PaymentEntities.GetContext().SaveChanges();
+                    MessageBox.Show("Данные успешно удалены!");
+                    DataGridPayment.ItemsSource = DB_PaymentEntities.GetContext().Payment.ToList();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }
+        }
+
+        private void ButtonEdit_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Pages.AddPaymentPage((sender as Button).DataContext as Payment));
         }
     }
 }
