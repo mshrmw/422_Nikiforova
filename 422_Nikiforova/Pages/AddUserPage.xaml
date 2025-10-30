@@ -35,7 +35,7 @@
         </ComboBox>
         <TextBox x:Name="TBFio" Text="{Binding FIO}" Grid.Row="3" ToolTip="Введите ФИО" Grid.Column="1" Margin="156,5,71,5" FontSize="20"/>
         <TextBox x:Name="TBPhoto" Text="{Binding Photo}" Grid.Row="4" ToolTip="Добавте фото" Grid.Column="1" Margin="156,5,71,4" FontSize="20"/>
-        <Button x:Name="ButtonSave" Content="Сохранить" Grid.Row="5" Click="ButtonSave_Click" Grid.ColumnSpan="2" Margin="0,0,50,0" HorizontalAlignment="Right" />
-        <Button x:Name="ButtonClean" Content="Очистить" Grid.Row="5" Click="ButtonClean_Click" Grid.ColumnSpan="2" Margin="50,0,0,0" HorizontalAlignment="Left" />
+        <Button x:Name="ButtonSave" Content="Сохранить" ToolTip="Кнопка сохранить" Grid.Row="5" Click="ButtonSave_Click" Grid.ColumnSpan="2" Margin="0,0,50,0" HorizontalAlignment="Right" />
+        <Button x:Name="ButtonClean" Content="Очистить" ToolTip="Кнопка очистить" Grid.Row="5" Click="ButtonClean_Click" Grid.ColumnSpan="2" Margin="50,0,0,0" HorizontalAlignment="Left" />
     </Grid>
 </Page>

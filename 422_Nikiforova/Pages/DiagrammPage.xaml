@@ -3,12 +3,36 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:charts="clr-namespace:System.Windows.Forms.DataVisualization.Charting;assembly=System.Windows.Forms.DataVisualization"
       xmlns:local="clr-namespace:_422_Nikiforova.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Диаграммы">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="0">
+            <TextBlock Text="Пользователь" VerticalAlignment="Center"/>
+            <ComboBox SelectionChanged="UpdateChart" ToolTip="Выбор пользователя" Margin="7,0,0,0" x:Name="UserComboBox" VerticalContentAlignment="Center" VerticalAlignment="Center" Width="140" DisplayMemberPath="FIO" SelectedValuePath="ID" SelectedValue="{Binding Path=UserID}"/>
+
+            <TextBlock Text="Тип диаграммы:" Margin="10,0,0,0" VerticalAlignment="Center"/>
+            <ComboBox SelectionChanged="UpdateChart" ToolTip="Выбор тип диаграммы" Margin="7,0,0,0" x:Name="DiagrammComboBox" VerticalContentAlignment="Center" VerticalAlignment="Center" Width="140"/>
+
+            <Button x:Name="ExcelButton" Content="Excel" ToolTip="Кнопка экспорт в Excel" Click="ExcelButton_Click"/>
+            <Button x:Name="WordButton" Content="Word" ToolTip="Кнопка экспорт в Word" Click="WordButton_Click"/>
+        </StackPanel>
+        <WindowsFormsHost HorizontalAlignment="Stretch"  Grid.Row="1" VerticalAlignment="Stretch"  Height="300" Width="700" Margin="5">
+            <charts:Chart x:Name="ChartPayments">
+                <charts:Chart.Legends>
+                    <charts:Legend>
+
+                    </charts:Legend>
+                </charts:Chart.Legends>
+            </charts:Chart>
+        </WindowsFormsHost>
+
     </Grid>
 </Page>

@@ -15,14 +15,14 @@
         </Grid.RowDefinitions>
         <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
             <TextBlock Text="Введите ФИО для поиска:" VerticalAlignment="Center"/>
-            <TextBox x:Name="fioFilterTextBox" Margin="7,7,0,7" MinWidth="100" TextChanged="fioFilterTextBox_TextChanged"/>
+            <TextBox x:Name="fioFilterTextBox" Margin="7,7,0,7" MinWidth="100" TextChanged="fioFilterTextBox_TextChanged" ToolTip="Введите ФИО для поиска"/>
             <TextBlock Text="Сортировка по ФИО:" Margin="10,0,0,0" VerticalAlignment="Center"/>
-            <ComboBox SelectionChanged="sortComboBox_SelectionChanged" Margin="7,0,0,0" x:Name="sortComboBox" SelectedIndex="0" VerticalContentAlignment="Center" VerticalAlignment="Center">
+            <ComboBox SelectionChanged="sortComboBox_SelectionChanged" Margin="7,0,0,0" x:Name="sortComboBox" SelectedIndex="0" VerticalContentAlignment="Center" VerticalAlignment="Center" ToolTip="Выберите сортировку">
                 <ComboBoxItem Content="По возрастанию"/>
                 <ComboBoxItem Content="По убыванию"/>
             </ComboBox>
-            <CheckBox IsChecked="False" Checked="onlyAdminCheckBox_Checked" Unchecked="onlyAdminCheckBox_Unchecked" Content="Только администраторы" x:Name="onlyAdminCheckBox" VerticalContentAlignment="Center" Margin="10,0,0,0"/>
-            <Button x:Name="clearFiltersButton" Content="Очистить фильтр" Click="clearFiltersButton_Click_1"/>
+            <CheckBox IsChecked="False" Checked="onlyAdminCheckBox_Checked" Unchecked="onlyAdminCheckBox_Unchecked" Content="Только администраторы" x:Name="onlyAdminCheckBox" VerticalContentAlignment="Center" Margin="10,0,0,0" ToolTip="Вывод только администраторов"/>
+            <Button x:Name="clearFiltersButton" Content="Очистить фильтр" Click="clearFiltersButton_Click_1" ToolTip="Кнопка очистить фильтр"/>
         </WrapPanel>
         <ListView Name="ListUser" Grid.Row="1" HorizontalContentAlignment="Center" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <ListView.ItemsPanel>

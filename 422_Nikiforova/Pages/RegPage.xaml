@@ -35,6 +35,6 @@
         <Label x:Name="lblPassHitn" Foreground="Gray" Grid.Column="1" Content="Введите пароль" HorizontalAlignment="Left" Margin="339,67,0,0" Grid.Row="1" VerticalAlignment="Top" Width="182" Height="29" MouseLeftButtonUp="lblPassHitn_MouseLeftButtonUp"/>
         <Label x:Name="lblPassSecHitn" Foreground="Gray" Grid.Column="1" Content="Повторите пароль" HorizontalAlignment="Left" Margin="339,118,0,0" Grid.Row="1" VerticalAlignment="Top" Width="182" Height="33" MouseLeftButtonUp="lblPassSecHitn_MouseLeftButtonUp"/>
         <Label x:Name="lblFioHitn" Foreground="Gray" Grid.Column="1" Content="Введите ФИО" HorizontalAlignment="Left" Margin="339,244,0,0" Grid.Row="1" VerticalAlignment="Top" Width="182" Height="42" MouseLeftButtonUp="lblFioHitn_MouseLeftButtonUp"/>
-        <Button x:Name="regButton" Grid.Column="1" Content="Зарегистрироваться" HorizontalAlignment="Left" Margin="345,302,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.535,-0.075" Width="170" Click="regButton_Click" />
+        <Button x:Name="regButton" Grid.Column="1" Content="Зарегистрироваться" HorizontalAlignment="Left" Margin="345,302,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.535,-0.075" Width="170" Click="regButton_Click" ToolTip="Кнопка зарегистрироваться"/>
     </Grid>
 </Page>
