@@ -70,8 +70,6 @@ namespace _422_Nikiforova.Pages
             TBAmount.Text = "";
             TBCount.Text = "";
             TBDate.Text = "";
-            CBUser.Items.Clear();
-            CBCategory.Items.Clear();
         }
     }
 }

@@ -137,7 +137,8 @@ namespace _422_Nikiforova.Pages
                         passBxScnd.Clear();
                         comboBxRole.SelectedIndex = 0;
                         txtbxFIO.Clear();
-                        return;
+                        NavigationService?.Navigate(new AuthPage());
+
                     }
                 }
             }

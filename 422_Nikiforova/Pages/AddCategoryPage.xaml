@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:_422_Nikiforova.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="250" d:DesignWidth="700"
       Title="Добавить категорию">
 
     <Grid>
@@ -13,9 +13,9 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock Text="Название категории" Grid.Row="0" FontSize="20" Margin="55,91,319,71" RenderTransformOrigin="0.258,2.273"/>
-        <TextBox x:Name="TBCategoryName" Grid.Row="0" Margin="400,94,164,103" Text="{Binding Name}" ToolTip="Название категории" FontSize="20" />
-        <Button x:Name="ButtonSaveCategory" Content="Сохранить" ToolTip="Кнопка сохранить" Grid.Row="1" Click="ButtonSaveCategory_Click" Margin="249,89,249,101"/>
-        <Button x:Name="ButtonClean" Content="Очистить" ToolTip="Кнопка очистить" Grid.Row="1" Click="ButtonClean_Click" Margin="249,148,249,42"/>
+        <TextBlock Text="Название категории" FontSize="20" Margin="50,0,459,0" />
+        <TextBox x:Name="TBCategoryName" Text="{Binding Name}" ToolTip="Название категории" FontSize="20" Margin="348,0,40,0" />
+        <Button x:Name="ButtonSaveCategory" Content="Сохранить" ToolTip="Кнопка сохранить" Grid.Row="1" Click="ButtonSaveCategory_Click" Margin="285,15,285,0" VerticalAlignment="Top"/>
+        <Button x:Name="ButtonClean" Content="Очистить" ToolTip="Кнопка очистить" Grid.Row="1" Click="ButtonClean_Click" Margin="285,75,285,0" VerticalAlignment="Top" />
     </Grid>
 </Page>

@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:_422_Nikiforova.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="350" d:DesignWidth="800"
       Title="Добавить платеж">
 
     <Grid>
@@ -14,20 +14,20 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock Text="Название платежа" Grid.Row="0" FontSize="20" Margin="17,19,569,102"/>
-        <TextBox x:Name="TBPaymentName" ToolTip="Название платежа" Grid.Row="0" Margin="400,26,48,95" Text="{Binding Name}" FontSize="20" />
-        <TextBlock Text="Сумма" FontSize="20" Margin="17,68,615,51"/>
-        <TextBox x:Name="TBAmount" ToolTip="Сумма" Margin="400,75,48,45" Text="{Binding Price}" FontSize="20"/>
-        <Button x:Name="ButtonSave" Content="Сохранить" ToolTip="Кнопка сохранить" Grid.Row="2" Click="ButtonSave_Click" Margin="11,105,447,10"/>
-        <Button x:Name="ButtonClean" Content="Очистить" ToolTip="Кнопка очистить" Grid.Row="2" Click="ButtonClean_Click" Margin="448,105,10,10"/>
-        <TextBlock Grid.Row="1" FontSize="20" Margin="17,10,567,108"><Run Language="ru-ru" Text="Количество" /></TextBlock>
-        <TextBox x:Name="TBCount" Grid.Row="1" Margin="400,10,48,109" Text="{Binding Num}" FontSize="20" ToolTip="Количество" />
-        <TextBlock Grid.Row="1" FontSize="20" Margin="27,62,618,57"><Run Language="ru-ru" Text="Дата"/></TextBlock>
-        <TextBox x:Name="TBDate" Grid.Row="1" Margin="400,62,48,57" Text="{Binding Date}" ToolTip="Дата" FontSize="20"/>
+        <TextBlock Text="Название платежа" FontSize="20" Margin="50,20,565,0" VerticalAlignment="Top" />
+        <TextBox x:Name="TBPaymentName" ToolTip="Название платежа" Text="{Binding Name}" FontSize="20" Margin="380,20,20,0" VerticalAlignment="Top" />
+        <TextBlock Text="Сумма" FontSize="20" Margin="50,66,678,0" VerticalAlignment="Top" />
+        <TextBox x:Name="TBAmount" ToolTip="Сумма" Text="{Binding Price}" FontSize="20" Margin="380,69,20,0" VerticalAlignment="Top"/>
+        <Button x:Name="ButtonSave" Content="Сохранить" ToolTip="Кнопка сохранить" Grid.Row="2" Click="ButtonSave_Click" Margin="557,72,113,0" VerticalAlignment="Top" />
+        <Button x:Name="ButtonClean" Content="Очистить" ToolTip="Кнопка очистить" Grid.Row="2" Click="ButtonClean_Click" Margin="72,72,598,0" VerticalAlignment="Top"/>
+        <TextBlock Grid.Row="1" FontSize="20" Margin="50,0,625,0" VerticalAlignment="Top" ><Run Language="ru-ru" Text="Количество" /></TextBlock>
+        <TextBox x:Name="TBCount" Grid.Row="1" Text="{Binding Num}" FontSize="20" ToolTip="Количество" Margin="380,0,20,0" VerticalAlignment="Top" />
+        <TextBlock Grid.Row="1" FontSize="20" Margin="50,0,688,0" ><Run Language="ru-ru" Text="Дата"/></TextBlock>
+        <TextBox x:Name="TBDate" Grid.Row="1" Text="{Binding Date}" ToolTip="Дата" FontSize="20" Margin="380,0,20,0"/>
 
-        <ComboBox x:Name="CBUser" Grid.Row="1" Margin="400,109,48,10" SelectedValuePath="ID" SelectedValue="{Binding Path=UserID}" Height="30" ToolTip="Выбор клиента"/>
-        <ComboBox x:Name="CBCategory" Grid.Row="2" Margin="400,10,48,109" SelectedValuePath="ID" SelectedValue="{Binding Path=CategoryID}" Height="30" ToolTip="Выбор категории"/>
-        <TextBlock Grid.Row="1" FontSize="20" Margin="27,109,618,10"><Run Text="ID"/><Run Language="ru-ru" Text=" клиента"/></TextBlock>
-        <TextBlock Grid.Row="2" FontSize="20" Margin="24,10,622,109"><Run Text="ID"/><Run Language="ru-ru" Text=" категории"/></TextBlock>
+        <ComboBox x:Name="CBUser" Grid.Row="1" SelectedValuePath="ID" SelectedValue="{Binding Path=UserID}" Height="30" ToolTip="Выбор клиента" Margin="380,83,20,3"/>
+        <ComboBox x:Name="CBCategory" Grid.Row="2" SelectedValuePath="ID" SelectedValue="{Binding Path=CategoryID}" Height="30" ToolTip="Выбор категории" Margin="380,17,20,70"/>
+        <TextBlock Grid.Row="1" FontSize="20" Margin="50,86,625,0" VerticalAlignment="Top"><Run Text="ID"/><Run Language="ru-ru" Text=" клиента"/></TextBlock>
+        <TextBlock Grid.Row="2" FontSize="20" Margin="50,19,598,0" VerticalAlignment="Top" ><Run Text="ID"/><Run Language="ru-ru" Text=" категории"/></TextBlock>
     </Grid>
 </Page>

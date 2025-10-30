@@ -19,7 +19,7 @@
                 <DataGridTemplateColumn Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button x:Name="ButtonEdit" Content="Реактировать" ToolTip="Редактировать данные" Click="ButtonEdit_Click"></Button>
+                            <Button x:Name="ButtonEdit" Content="Редактировать" ToolTip="Редактировать данные" Click="ButtonEdit_Click"></Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
