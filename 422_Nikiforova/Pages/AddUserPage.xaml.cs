@@ -27,6 +27,17 @@ namespace _422_Nikiforova.Pages
             if (selectedUser != null)
                 _currentUser = selectedUser;
             DataContext = _currentUser;
+            if (_currentUser.Role != null)
+            {
+                foreach (ComboBoxItem item in cmbRole.Items)
+                {
+                    if (item.Content.ToString() == _currentUser.Role)
+                    {
+                        cmbRole.SelectedItem = item;
+                        break;
+                    }
+                }
+            }
         }
 
         private void ButtonSave_Click(object sender, RoutedEventArgs e)
@@ -36,10 +47,10 @@ namespace _422_Nikiforova.Pages
                 errors.AppendLine("Укажите логин!");
             if (string.IsNullOrWhiteSpace(_currentUser.Password))
                 errors.AppendLine("Укажите пароль!");
-            if ((_currentUser.Role == null) || (cmbRole.Text == ""))
+            if ((_currentUser.Role == null) || (cmbRole.Text == "" || cmbRole.SelectedItem == null))
                 errors.AppendLine("Выберите роль!");
             else
-                _currentUser.Role = cmbRole.Text;
+                _currentUser.Role = (cmbRole.SelectedItem as ComboBoxItem)?.Content.ToString();
             if (string.IsNullOrWhiteSpace(_currentUser.FIO))
                 errors.AppendLine("Укажите ФИО");
             if (errors.Length > 0)

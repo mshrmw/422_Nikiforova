@@ -29,7 +29,7 @@
         <TextBlock Text="Фото (необязательно)" Grid.Row="3" Grid.Column="0" Margin="10,64,573,0" FontSize="20" Grid.ColumnSpan="2" Grid.RowSpan="2" />
         <TextBox x:Name="TBLogin" Text="{Binding Login}" Grid.Row="0" ToolTip="Введите логин" Grid.Column="1" Margin="156,5,71,5" FontSize="20" />
         <TextBox x:Name="TBPass" Text="{Binding Password}" Grid.Column="1" ToolTip="Введите пароль" Margin="156,5,71,5" Grid.Row="1" FontSize="20"/>
-        <ComboBox Name="cmbRole" SelectedItem="{Binding Role}" ToolTip="Ввыберите роль" Grid.Row="2" Grid.Column="1" Margin="156,5,71,5" Height="30">
+        <ComboBox x:Name="cmbRole" SelectedValuePath="ID"  SelectedValue="{Binding Role, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ToolTip="Ввыберите роль" Grid.Row="2" Grid.Column="1" Margin="156,5,71,5" Height="30">
             <ComboBoxItem Content="Admin" />
             <ComboBoxItem Content="User" />
         </ComboBox>
