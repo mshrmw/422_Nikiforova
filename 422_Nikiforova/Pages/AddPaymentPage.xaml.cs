@@ -69,7 +69,7 @@ namespace _422_Nikiforova.Pages
             TBPaymentName.Text = "";
             TBAmount.Text = "";
             TBCount.Text = "";
-            TBDate.Text = "";
+            DPDate.Text = "";
         }
     }
 }

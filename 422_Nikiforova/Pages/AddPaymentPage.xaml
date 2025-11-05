@@ -23,10 +23,10 @@
         <TextBlock Grid.Row="1" FontSize="20" Margin="50,0,625,0" VerticalAlignment="Top" ><Run Language="ru-ru" Text="Количество" /></TextBlock>
         <TextBox x:Name="TBCount" Grid.Row="1" Text="{Binding Num}" FontSize="20" ToolTip="Количество" Margin="380,0,20,0" VerticalAlignment="Top" />
         <TextBlock Grid.Row="1" FontSize="20" Margin="50,0,688,0" ><Run Language="ru-ru" Text="Дата"/></TextBlock>
-        <TextBox x:Name="TBDate" Grid.Row="1" Text="{Binding Date}" ToolTip="Дата" FontSize="20" Margin="380,0,20,0"/>
-
-        <ComboBox x:Name="CBUser" Grid.Row="1" SelectedValuePath="ID" SelectedValue="{Binding Path=UserID}" Height="30" ToolTip="Выбор клиента" Margin="380,83,20,3"/>
-        <ComboBox x:Name="CBCategory" Grid.Row="2" SelectedValuePath="ID" SelectedValue="{Binding Path=CategoryID}" Height="30" ToolTip="Выбор категории" Margin="380,17,20,70"/>
+        <DatePicker Margin="380,43,20,43" Grid.Row="1" SelectedDate="{Binding Date, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" x:Name="DPDate"  ToolTip="Дата" FontSize="10" />
+        
+        <ComboBox x:Name="CBUser" Grid.Row="1" SelectedValuePath="ID" SelectedValue="{Binding Path=UserID}" Height="25" ToolTip="Выбор клиента" Margin="380,83,20,3"/>
+        <ComboBox x:Name="CBCategory" Grid.Row="2" SelectedValuePath="ID" SelectedValue="{Binding Path=CategoryID}" Height="25" ToolTip="Выбор категории" Margin="380,17,20,70"/>
         <TextBlock Grid.Row="1" FontSize="20" Margin="50,86,625,0" VerticalAlignment="Top"><Run Text="ID"/><Run Language="ru-ru" Text=" клиента"/></TextBlock>
         <TextBlock Grid.Row="2" FontSize="20" Margin="50,19,598,0" VerticalAlignment="Top" ><Run Text="ID"/><Run Language="ru-ru" Text=" категории"/></TextBlock>
     </Grid>
