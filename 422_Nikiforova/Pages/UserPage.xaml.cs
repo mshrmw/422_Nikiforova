@@ -59,17 +59,14 @@ namespace _422_Nikiforova.Pages
             try
             {
                 List<User> currentUsers = DB_PaymentEntities.GetContext().User.ToList();
-                //Фильтрация по фамилии
                 if (!string.IsNullOrWhiteSpace(fioFilterTextBox.Text))
                 {
                     currentUsers = currentUsers.Where(x => x.FIO.ToLower().Contains(fioFilterTextBox.Text.ToLower())).ToList();
                 }
-                //Фильтрация по роли
                 if (onlyAdminCheckBox.IsChecked.Value)
                 {
                     currentUsers = currentUsers.Where(x => x.Role == "Admin").ToList();
                 }
-                //Фильтрация по убыванию/возрастанию
                 ListUser.ItemsSource = (sortComboBox.SelectedIndex == 0) ? currentUsers.OrderBy(x => x.FIO).ToList() : currentUsers.OrderByDescending(x => x.FIO).ToList();
             }
             catch (Exception)

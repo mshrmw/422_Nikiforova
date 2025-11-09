@@ -37,6 +37,8 @@ namespace _422_Nikiforova.Pages
         private void ButtonSave_Click(object sender, RoutedEventArgs e)
         {
             StringBuilder errors = new StringBuilder();
+            if (string.IsNullOrWhiteSpace(_currentPayment.Name))
+                errors.AppendLine("Укажите название платежа!");
             if (string.IsNullOrWhiteSpace(_currentPayment.Date.ToString()))
                 errors.AppendLine("Укажите дату!");
             if (string.IsNullOrWhiteSpace(_currentPayment.Num.ToString()))
